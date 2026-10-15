@@ -2,6 +2,8 @@
 
 Read this first when starting a new session. Last updated: 2026-10-15 (built locally).
 Technical overview: `../README.md`. Owner's guide (Hinglish): `OWNER-GUIDE.md`.
+Code on GitHub: https://github.com/Munish86/bulk-uploader-website (`main`). Not in git: `local-login.txt`, `tools/.shots/`,
+`tools/wp-cli.phar` (see `.gitignore`); the WordPress database and uploads live only in XAMPP.
 
 ## Goal
 
