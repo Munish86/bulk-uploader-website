@@ -1,0 +1,89 @@
+<!-- wp:paragraph -->
+<p>A photographer sends you 600 images in a folder. Each product needs three to six of them, in the right order, with alt text. Dragging them into Shopify product by product takes a full day. If the files are named well, it can take a few minutes instead. This guide shows the naming that makes images match themselves.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Why Shopify's import makes images hard</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Shopify's product CSV import doesn't take image files. It takes a web address for each image, in an "Image Src" column, and the image must already be online where Shopify can download it. So you first upload every file somewhere, collect 600 links, and paste each one into the right row. That's the slow part.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The faster way is to let the file name say which product an image belongs to.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Name each image after its product</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Add an "Image Name" column to your product sheet and give each product a short, unique name. Then name the files after it, with a number for the order:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table {"hasFixedLayout":false} -->
+<figure class="wp-block-table"><table><thead><tr><th>File</th><th>Goes to</th></tr></thead><tbody><tr><td><code>Oslo Sofa.jpg</code></td><td>Oslo Sofa, image 1</td></tr><tr><td><code>Oslo Sofa_1.jpg</code></td><td>Oslo Sofa, image 2</td></tr><tr><td><code>oslo-sofa-2.png</code></td><td>Oslo Sofa, image 3</td></tr><tr><td><code>Oslo Sofa (3).webp</code></td><td>Oslo Sofa, image 4</td></tr><tr><td><code>Oslo Sofa Grey.jpg</code></td><td>Nothing: "Oslo Sofa Grey" is a different name</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>In <a href="/features/">Bulk Product Uploader</a>, capitals, spaces, dashes and underscores don't matter, and a number at the end (with a space, dash, underscore or in brackets) sets the order. Folders don't matter either: <code>Sofas/Oslo Sofa.jpg</code> works the same as a file at the top.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Good naming habits</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Use the same name in the sheet and on the files.</strong> If your photographer names files by SKU, use the SKU as the image name in the sheet. That's often the easiest.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Keep names unique.</strong> "Sofa" for two different sofas sends all their photos to both.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Put the main photo first.</strong> The file without a number, or with the lowest number, becomes the first image, which Shopify shows in collections.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Rename in bulk, not by hand.</strong> Windows File Explorer can rename a selection to "Oslo Sofa (1)", "Oslo Sofa (2)" and so on: select the files, press F2, type the name and Enter. On a Mac, select the files and choose Rename from the right-click menu.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Size and format</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Shopify recommends square product images of 2048 × 2048 pixels for zoom. JPG is best for photos, PNG for images with transparent backgrounds, and WebP for smaller files. Keep each file well under 20 MB; most good product photos are under 1 MB.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Alt text without writing it 600 times</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Alt text describes the image for screen readers and search engines. If you leave the alt text column empty, Bulk Product Uploader uses the product title, which is a sensible default. For better SEO, add an "Image alt text" column with a short description, such as "Oslo 3 seater sofa in grey linen".</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Products that already have images</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Decide this before you upload. You can add the new images and keep the old ones, skip products that already have images (useful to fill in only the gaps), or replace all images with the new set. An image that's already on the product isn't uploaded twice.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Check before you upload</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Run "Check image matches" first. It lists the images each product will get, and the images that match no product at all. Those leftovers are almost always a typo in a file name, and they're much easier to fix now than after the upload.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Your images are on Google Drive? Share the folder and paste its link instead of uploading; the same naming rules apply. <a href="/how-it-works/">See how it works</a>.</p>
+<!-- /wp:paragraph -->

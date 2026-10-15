@@ -1,0 +1,121 @@
+<!-- wp:paragraph -->
+<p>A bulk import changes hundreds of live products in a few minutes. That's the point, and also the danger: one wrong column and every product page in a collection is broken before anyone notices. These are the mistakes we see most often, and how to avoid each one.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">1. Blank cells that wipe your data</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In Shopify's CSV import with "Overwrite products with matching handles" ticked, a blank cell in a column replaces the value in your store with nothing. Import a sheet with an empty Vendor column and every vendor is gone.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Avoid it:</strong> delete columns you don't mean to change from the file, rather than leaving them empty. Or use a tool that treats an empty cell as "leave it alone"; <a href="/features/">Bulk Product Uploader</a> does, and only touches the columns you map.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">2. Matching on a value that isn't unique</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Two products called "Classic T-Shirt", or a SKU that was reused for a new colour, and the update lands on the wrong product, or on both.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Avoid it:</strong> match on SKU or barcode where you can, and check for duplicates in the sheet first (in Excel: select the column, Conditional Formatting, Highlight Cells Rules, Duplicate Values). Bulk Product Uploader only uses a match that finds exactly one product and reports the rest.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">3. Variants that disappear</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A sheet with only the sizes that changed can be read as "these are all the sizes", and the others get removed, along with their stock and sales history.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Avoid it:</strong> know what your tool does with variants that aren't in the file. In Bulk Product Uploader they're kept unless you untick "Keep existing variants that are not in the sheet".</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">4. Changed handles that break links</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The handle is the product's web address. Change it and every link to the old address, from Google, ads, emails and social posts, leads to a missing page unless a redirect is set up.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Avoid it:</strong> don't change handles in a bulk update. Bulk Product Uploader only sets the handle of new products and never changes the address of an existing one.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">5. Prices with text in them</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>"Rs. 1,299/-", "$19.99 USD" or "1.299,00" can be rejected, or read as a different number.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Avoid it:</strong> keep prices as plain numbers with a dot for decimals. Then check a few prices in the preview before uploading.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">6. Publishing unfinished products</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>New products imported as active go live at once, with whatever text and images they have, even if the photos are still missing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Avoid it:</strong> create new products as drafts, check them in the Shopify admin, then set them active. Draft is the default for new products in Bulk Product Uploader.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">7. No way back</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>The worst mistake is the one you can't undo. Shopify's import has no undo button, so a bad file means fixing products by hand.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Avoid it:</strong> export your products before every big import. Better still, use a tool with backups: Bulk Product Uploader saves each product before changing it, and a restore puts back only what that upload changed.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">A checklist for every bulk upload</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list {"className":"bu-check"} -->
+<ul class="wp-block-list bu-check"><!-- wp:list-item -->
+<li>Products exported or backed up</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Only the columns you mean to change are included or mapped</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Matching values (SKU, barcode) checked for duplicates</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Prices are plain numbers</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>New products set to draft</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Preview read, not just glanced at</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>A test run on five products, checked in Shopify, before the rest</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->

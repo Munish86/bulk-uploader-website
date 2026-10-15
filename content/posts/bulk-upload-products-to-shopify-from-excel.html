@@ -1,0 +1,137 @@
+<!-- wp:paragraph -->
+<p>Your products are in an Excel sheet: a supplier's price list, a new season's range, or a catalogue your team has kept for years. Typing them into Shopify one by one takes days. Here are the three ways to get them in, how to lay out the sheet so any of them works, and how to check the result before your live store changes.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Three ways to get Excel products into Shopify</h2>
+<!-- /wp:heading -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">1. Shopify's own CSV import</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In the Shopify admin, Products, then Import. It's free and built in, but it only reads a CSV in Shopify's exact template: the columns must have Shopify's names (Handle, Title, Body (HTML), Variant SKU and so on), and every image must be a public web address. So your Excel sheet has to be rebuilt into that format first. Existing products are matched only by handle, and there's no undo.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Good for: moving a store, or adding brand-new products when your images are already online.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">2. Copying by hand, with Shopify's bulk editor</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Shopify's bulk editor shows products as a grid you can edit like a spreadsheet. You can paste a column of prices or tags into it. It's fine for a few dozen products and simple fields, but it can't create products, it doesn't take images, and pasting hundreds of rows in the right order is error-prone.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">3. An app that reads your own sheet</h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A bulk upload app such as <a href="/features/">Bulk Product Uploader</a> reads the Excel file as it is. You tell it once which of your columns is the title, the price, the SKU, and it remembers. It finds each product by SKU, barcode, handle or title, matches images from a folder by file name, and shows a preview before saving.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Good for: regular updates, supplier sheets, images on your computer, and any time a mistake would be expensive.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">How to lay out the sheet</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Whichever way you choose, a clean sheet saves most of the trouble. Follow these rules:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><strong>One row of column names</strong>, then one row per product, or per variant. No merged cells, no sub-totals, no blank rows in the middle.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>A unique key for every product.</strong> Usually the SKU. For products with variants, add a product key column (a style code) that is the same on every row of that product.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>One column per option.</strong> Colour in one column, size in another; not "Blue / Large" in one cell.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Plain numbers for prices.</strong> 1299.00 rather than "Rs 1,299/-". (Bulk Product Uploader copes with symbols and commas, but other tools may not.)</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Tags and collections comma separated</strong> in a single cell: <code>sofa, linen, living room</code>.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>An image name column</strong> if your photos are files: the name the image files start with, such as "Oslo Sofa".</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>A sheet laid out like this has a product with three variants and one product with one:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table {"hasFixedLayout":false} -->
+<figure class="wp-block-table"><table><thead><tr><th>Product Key</th><th>Product Title</th><th>SKU</th><th>Colour</th><th>Size</th><th>Price</th><th>Image Name</th></tr></thead><tbody><tr><td>SOFA-001</td><td>Oslo 3 Seater Sofa</td><td>SOFA-001-GR</td><td>Grey</td><td>3 seater</td><td>899.00</td><td>Oslo Sofa</td></tr><tr><td>SOFA-001</td><td>Oslo 3 Seater Sofa</td><td>SOFA-001-BE</td><td>Beige</td><td>3 seater</td><td>899.00</td><td>Oslo Sofa</td></tr><tr><td>SOFA-001</td><td>Oslo 3 Seater Sofa</td><td>SOFA-001-BE2</td><td>Beige</td><td>2 seater</td><td>749.00</td><td>Oslo Sofa</td></tr><tr><td>BED-014</td><td>Aria Upholstered Bed</td><td>BED-014-K</td><td>Navy</td><td>King</td><td>1099.00</td><td>Aria Bed</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step by step with Bulk Product Uploader</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Load the sheet.</strong> Choose the .xlsx file (or a CSV, or paste a Google Sheet link) and pick the tab.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Map the columns.</strong> Click "Auto-fill from column names", then check: Product Title to Title, SKU to SKU, Price to Price, Image Name to Image name. Leave everything you don't want to change on "Not used".</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Choose how products are found.</strong> By SKU first is safest. Add title as a second rule only if your titles are unique.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Add images</strong> by dragging in the folder.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Set the rules.</strong> Tick "Create products that are not in Shopify" if the sheet has new products, and keep new products as drafts for a first run.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Preview.</strong> Read the results: how many will be updated, created, or not found, and what changes for each.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Test, then upload.</strong> Set "Only the first N products" to 5, upload, and open those products in Shopify. If they look right, clear the limit and upload the rest. Products already done are skipped.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Before you upload to a live store</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Export your products from Shopify (Products, Export) and keep the file. It's a cheap safety net, whatever tool you use.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Check that your SKUs in the sheet and in Shopify are written the same way: "SOFA-001" and "SOFA001" are different SKUs.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Run a small test first, always.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Bulk Product Uploader also backs up every product before changing it, so if the test still goes wrong you can <a href="/how-it-works/">restore the upload</a> in two clicks.</p>
+<!-- /wp:paragraph -->

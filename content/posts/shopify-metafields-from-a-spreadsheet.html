@@ -1,0 +1,85 @@
+<!-- wp:paragraph -->
+<p>Material, care instructions, dimensions, a size guide, "made in": the details shoppers look for before they buy rarely fit in Shopify's standard fields. Metafields hold them. Filling them product by product is slow, but if the details are already in a spreadsheet, you can upload them all at once.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">What a metafield is</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>A metafield is an extra field on a product, with three parts:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Namespace</strong>: a group name. Fields you create in the Shopify admin use <code>custom</code>.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Key</strong>: the field's own name, such as <code>material</code> or <code>care_instructions</code>.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Type</strong>: what kind of value it holds: a line of text, a number, true or false, a date, a colour, and so on.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Together they're written as <code>custom.material</code>. Most themes can show a metafield on the product page with a dynamic source, without any code.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step 1: create the definition in Shopify</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In the Shopify admin, go to Settings, then Custom data, then Products, and add a definition. Give it a name ("Material"); Shopify suggests the namespace and key (<code>custom.material</code>). Choose the type. A definition makes the field show up neatly in the product editor and lets your theme use it.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step 2: add a column to your sheet</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Add one column per metafield. In <a href="/features/">Bulk Product Uploader</a>, put the namespace and key in brackets after the column name, and the metafield is set up for you when the sheet loads:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:table {"hasFixedLayout":false} -->
+<figure class="wp-block-table"><table><thead><tr><th>SKU</th><th>Material (custom.material)</th><th>Care (custom.care_instructions)</th><th>Seats (custom.seats)</th></tr></thead><tbody><tr><td>SOFA-001-GR</td><td>Linen blend</td><td>Spot clean only</td><td>3</td></tr><tr><td>BED-014-K</td><td>Velvet</td><td>Vacuum gently</td><td></td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>Then check the type under Metafields in the app, so it matches the definition in Shopify. You can also add a metafield by hand there: sheet column, namespace, key and type.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step 3: write values the type understands</h2>
+<!-- /wp:heading -->
+
+<!-- wp:table {"hasFixedLayout":false} -->
+<figure class="wp-block-table"><table><thead><tr><th>Type</th><th>Use it for</th><th>Write it like</th></tr></thead><tbody><tr><td><code>single_line_text_field</code></td><td>Material, origin, a short note</td><td>Linen blend</td></tr><tr><td><code>multi_line_text_field</code></td><td>Care instructions over several lines</td><td>Text with line breaks</td></tr><tr><td><code>rich_text_field</code></td><td>Longer text with paragraphs</td><td>Text; an empty line starts a new paragraph</td></tr><tr><td><code>number_integer</code></td><td>Seats, pieces in a set</td><td>3</td></tr><tr><td><code>number_decimal</code></td><td>Weight, width</td><td>12.5</td></tr><tr><td><code>boolean</code></td><td>Assembly required, eco-friendly</td><td>yes / no (or true / false)</td></tr><tr><td><code>date</code></td><td>Launch date</td><td>2026-11-01</td></tr><tr><td><code>color</code></td><td>A swatch colour</td><td>#3A4AD6</td></tr><tr><td><code>url</code></td><td>A size guide or manual link</td><td>https://…</td></tr><tr><td><code>list.single_line_text_field</code></td><td>Several features</td><td>Removable covers, Solid wood legs</td></tr></tbody></table></figure>
+<!-- /wp:table -->
+
+<!-- wp:paragraph -->
+<p>A value that doesn't fit its type, such as "three" in a number field, is skipped and shown as a warning for that product in the preview, so you can fix it before uploading.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Step 4: preview, then upload</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Map only the SKU (to find the products) and the metafield columns, and leave every other field on "Not used". The preview then shows only metafield changes, so it's quick to check. Empty cells are skipped: a product with no seat count simply keeps whatever it has.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading">Showing metafields on the product page</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>In the theme editor, open a product page, add a text block where you want the detail, and click the "connect dynamic source" icon next to its text. Choose the metafield. Every product now shows its own value, and products without one show nothing.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Made a mistake in a whole column? Restore the upload from Backups: the metafields are set back to what they were, or removed if they were new. <a href="/how-it-works/">See how it works</a>.</p>
+<!-- /wp:paragraph -->

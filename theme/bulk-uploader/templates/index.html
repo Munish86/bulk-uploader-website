@@ -1,0 +1,47 @@
+<!-- wp:template-part {"slug":"header","tagName":"header","className":"bu-site-header"} /-->
+
+<!-- wp:group {"tagName":"main","className":"bu-main","layout":{"type":"default"}} -->
+<main class="wp-block-group bu-main"><!-- wp:group {"className":"bu-page-hero","layout":{"type":"constrained"}} -->
+<div class="wp-block-group bu-page-hero"><!-- wp:paragraph {"className":"bu-eyebrow"} -->
+<p class="bu-eyebrow">Blog</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":1} -->
+<h1 class="wp-block-heading">Guides for faster product uploads</h1>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"className":"bu-lead"} -->
+<p class="bu-lead">Practical guides for Shopify stores with big catalogues: product sheets, bulk image uploads, CSV imports, variants and metafields.</p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"bu-section bu-section--canvas bu-section--line bu-posts","layout":{"type":"constrained"}} -->
+<div class="wp-block-group bu-section bu-section--canvas bu-section--line bu-posts"><!-- wp:query {"queryId":1,"query":{"perPage":12,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"align":"wide"} -->
+<div class="wp-block-query alignwide"><!-- wp:post-template {"layout":{"type":"grid","minimumColumnWidth":"18rem"}} -->
+<!-- wp:post-featured-image {"isLink":true} /-->
+
+<!-- wp:post-date /-->
+
+<!-- wp:post-title {"level":2,"isLink":true} /-->
+
+<!-- wp:post-excerpt {"excerptLength":30} /-->
+<!-- /wp:post-template -->
+
+<!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"}} -->
+<!-- wp:query-pagination-previous /-->
+
+<!-- wp:query-pagination-numbers /-->
+
+<!-- wp:query-pagination-next /-->
+<!-- /wp:query-pagination -->
+
+<!-- wp:query-no-results -->
+<!-- wp:paragraph {"align":"center"} -->
+<p class="has-text-align-center">No posts yet.</p>
+<!-- /wp:paragraph -->
+<!-- /wp:query-no-results --></div>
+<!-- /wp:query --></div>
+<!-- /wp:group --></main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer","className":"bu-site-footer"} /-->

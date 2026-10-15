@@ -1,0 +1,309 @@
+<!-- wp:paragraph {"className":"bu-lead"} -->
+<p class="bu-lead">Everything you need to upload your first sheet and use Bulk Product Uploader every month. Can't find your answer? Write to [bu_support_email] with your store address (yourstore.myshopify.com).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:group {"className":"bu-toc","layout":{"type":"constrained"}} -->
+<div class="wp-block-group bu-toc"><!-- wp:paragraph -->
+<p>On this page</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><a href="#getting-started">Getting started</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="#sheet">Your product sheet</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="#google">Google Sheets and Drive</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="#columns">Mapping columns</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="#finding">Finding products</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="#variants">Variants</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="#metafields">Metafields</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="#images">Images</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="#rules">Update rules</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="#run">Check, preview and upload</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="#backups">Backups and restore</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="#plans">Plans and billing</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="#troubleshooting">Troubleshooting</a></li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list --></div>
+<!-- /wp:group -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading" id="getting-started">1. Getting started</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Install Bulk Product Uploader from the Shopify App Store and open it from Apps in your Shopify admin. There's no separate account or password. The app is one page with five steps: product sheet, columns, images, update rules and run. Your choices are saved automatically a moment after you change them.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>For a first try, download the product template from step 1, upload it as it is, and run a preview: you'll see how three example products would be created, without anything being saved.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading" id="sheet">2. Your product sheet</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Formats:</strong> Excel (.xlsx), CSV, or a Google Sheet link. Up to 25 MB and 50,000 rows.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Tab:</strong> for a workbook with several tabs, choose the one with your products.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Column names:</strong> one row holds them, normally the first. If there are notes above, leave "Row with the column names" on Auto, or type the row number.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>One row per product</strong>, or one row per variant with the same product key (see <a href="#variants">Variants</a>).</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>A new sheet</strong> replaces the old one. If its columns differ, links to columns that are gone are cleared and you're told which.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading" id="google">3. Google Sheets and Drive</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Paste the link to the sheet or the Drive folder. The app can read it in one of two ways:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li>Share it as <strong>Viewer</strong> with the app's email address, shown next to the link field in the app. Best for private files.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Or set it to <strong>"Anyone with the link can view"</strong>.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>The app reads Google files only when you start a run, and never changes them.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading" id="columns">4. Mapping columns</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Click <strong>Auto-fill from column names</strong>. The app links columns whose names it recognises (for example "Product Name" to Title, "Brand" to Vendor, "MRP" to Compare-at price, "EAN" to Barcode). Check each field and change what's wrong. Fields you leave on "Not used" are never touched.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Fields you can update: product key, image name, title, description (plain text or HTML), meta title, meta description, vendor, product type, tags, collections, SKU, price, compare-at price, barcode, status (ACTIVE, DRAFT or ARCHIVED), image alt text, and handle (for new products only; the address of an existing product is never changed).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph {"className":"bu-note bu-note--green"} -->
+<p class="bu-note bu-note--green"><strong>Empty cells are safe.</strong> A blank cell means "leave this as it is", never "delete it". Prices may include currency symbols and thousands commas.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading" id="finding">5. Finding products</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Under "Find each product in Shopify using", add one or more rules: a Shopify field (SKU, barcode, handle, title, tag, or Shopify product ID or admin link) and the sheet column that holds it. Rules are tried from top to bottom; the first one that finds <em>exactly one</em> product is used. If a rule finds two products, the next rule is tried.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>A column used to find products by title is not written back as the title. To rename products, find them by SKU or handle instead.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading" id="variants">6. Variants</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Give every row of the same product the same value in a <strong>product key</strong> column, such as a style code. Then, under "Variant options", tick the columns that make each variant different, for example Colour and Size. The column name must match the option name used in Shopify. Price, compare-at price, SKU and barcode are set per variant.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>By default, variants that are in Shopify but not in your sheet are kept. Untick "Keep existing variants that are not in the sheet" only if they should be deleted.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading" id="metafields">7. Metafields</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Name a column with the metafield in brackets, for example <code>Material (custom.material)</code>, and it's added under Metafields automatically. You can also add one by hand: sheet column, namespace, key and type (for example <code>single_line_text_field</code>). Use the namespace, key and type shown in your Shopify admin under Settings, then Custom data, then Products.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading" id="images">8. Images</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Link the "Image name" field to a column in your sheet. Image file names must match its value; capitals, spaces, dashes and underscores don't matter, and a number at the end sets the order. <code>Oslo Sofa.jpg</code>, <code>oslo-sofa_1.jpg</code> and <code>Oslo Sofa (2).png</code> all belong to "Oslo Sofa", in that order.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Upload images:</strong> drag a folder (sub-folders are fine) or choose files. JPG, PNG, WebP and GIF, up to 20 MB each. Uploaded files are kept for 7 days, then deleted.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Google Drive folder:</strong> paste the folder link (see <a href="#google">Google Sheets and Drive</a>).</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>When a product already has images:</strong> add the new ones and keep the old, skip that product, or replace all its images.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>An image that's already on the product isn't uploaded twice.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading" id="rules">9. Update rules</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Tags:</strong> add the sheet's tags to the existing ones, or keep only the sheet's tags.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Status of new products:</strong> draft (review before publishing) or active.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Speed:</strong> 1 to 8 products at a time. 4 is recommended; Shopify's rate limits are handled automatically.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Create products that are not in Shopify</strong> and <strong>Create collections that do not exist</strong>: off unless you tick them.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading" id="run">10. Check, preview and upload</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Step 5 shows a checklist; when every line is ticked, use the buttons in order:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li><strong>Check image matches</strong> lists the images found for each product, and images that match no product.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Preview changes</strong> shows, for every product, whether it will be updated or created, how it was found, and which fields change. Nothing is saved.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>Upload to Shopify</strong> asks you to confirm, then saves. Progress, time left and a log are shown; Stop finishes the products in progress and stops.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>For a test run, set "Only the first N products" or "Only these products" (product keys, comma separated). Products uploaded before with the same data are skipped as "Already done"; tick "Re-send products that were already uploaded" to send them again. The results can be filtered, searched and downloaded as CSV, and each product links to its page in your Shopify admin. Past runs are listed under "Recent runs".</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading" id="backups">11. Backups and restore</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Before every upload changes a product, the app saves it exactly as it was. To undo an upload:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list {"ordered":true} -->
+<ol class="wp-block-list"><!-- wp:list-item -->
+<li>Open <strong>Backups</strong> in the app menu. Uploads are listed by day.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Optionally limit it to some products, or tick "Skip products that were changed in Shopify after the upload".</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li>Click <strong>Preview restore</strong> to see what will be put back, then <strong>Restore</strong>.</li>
+<!-- /wp:list-item --></ol>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Only what that upload changed is put back; later changes to other fields, such as price or stock, are kept. Images the upload added are removed and replaced images are added back. Every restore is backed up too, so it can be undone the same way. Backups older than two months are hidden (click "Show older backups") and deleted after six months. Products the app created are new, so they have no earlier version to restore.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading" id="plans">12. Plans and billing</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Plans count products created or updated per calendar month: Free 50, Pro 2,000, Unlimited no limit. Checks, previews and restores are free. The Run step shows how many you have left; the count starts again on the 1st. Open <strong>Plans</strong> in the app menu to change plan. Billing is through Shopify, on your Shopify invoice. See <a href="/pricing/">Pricing</a>.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2 class="wp-block-heading" id="troubleshooting">13. Troubleshooting</h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul class="wp-block-list"><!-- wp:list-item -->
+<li><strong>"Not found in Shopify":</strong> the value in your find column doesn't match exactly one product. Check for extra spaces or a different SKU, add a second rule, or tick "Create products that are not in Shopify".</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>An image isn't matched:</strong> compare its file name with the Image name column. "Images that match no product" under the results lists them.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>The Google Sheet can't be read:</strong> share it with the app's email (Viewer) or set "Anyone with the link can view", then click "Load sheet" again.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>"Plan limit reached":</strong> your monthly products are used up. Upgrade or wait for the 1st, then run the sheet again; finished products are skipped.</li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><strong>The sheet or images can't be changed:</strong> a run is in progress. Wait for it to finish, or press Stop.</li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Still stuck? Write to [bu_support_email] with your store address, the time of the run and, if you can, the report CSV.</p>
+<!-- /wp:paragraph -->
